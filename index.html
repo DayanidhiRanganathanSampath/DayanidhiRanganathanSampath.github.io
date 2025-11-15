@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayanidhi Ranganathan Sampath | Data Analyst Portfolio</title>
+    <meta name="description" content="Data Analyst & Business Intelligence Specialist with 3 years of experience in Power BI, SQL, Python, and Tableau">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #2563eb;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2563eb;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .skill-card h3 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 5rem 0;
+            background: #f5f5f5;
+        }
+        
+        .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2563eb;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card-content {
+            padding: 2rem;
+        }
+        
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: #e5e7eb;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2563eb;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Dayanidhi RS | Portfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hi, I'm Dayanidhi Ranganathan Sampath</h1>
+            <p>Data Analyst | Business Intelligence Specialist | Power BI & SQL Expert</p>
+            <p style="font-size: 1.1rem;">3 Years Experience | MSc Business Analytics | Based in Limerick, Ireland</p>
+            <div>
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Data Analyst with 3 years of experience specializing in Business Intelligence, Power BI dashboards, and SQL-driven insights. Currently pursuing MSc Business Analytics at University of Limerick (2:1 Honours, QCA: 3.01/4.00).</p>
+                <p>Proven track record of designing KPI dashboards, automating reporting processes, and integrating data from multiple sources to support key business decisions.</p>
+            </div>
+            
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>📊 Data Analysis</h3>
+                    <p>Power BI, Tableau, Excel (Advanced), Statistical Analysis</p>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Programming</h3>
+                    <p>Python (Pandas, NumPy), SQL, R</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🤖 Machine Learning</h3>
+                    <p>Scikit-learn, TensorFlow, XGBoost, Predictive Modeling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>☁️ Data Tools</h3>
+                    <p>Git, Jupyter, MLflow, Snowflake, Databricks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Portfolio Optimization</h3>
+                        <p>Optimized investment portfolios for large-cap stocks using Python and advanced financial modeling techniques.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Finance</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Credit Risk Model</h3>
+                        <p>Built predictive model for credit default using machine learning algorithms with 85% accuracy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Risk Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Insurance Claims Dashboard</h3>
+                        <p>Interactive Tableau dashboards visualizing insurance claims data for C-suite executives.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Dashboard Design</span>
+                            <span class="tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Uber Drive Analysis</h3>
+                        <p>Comprehensive EDA of 1,155 trips uncovering travel patterns and business insights using Python.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">EDA</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Wholesale Customer Analysis</h3>
+                        <p>Statistical analysis of 440 retailers across Portugal identifying spending patterns and regional trends.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Statistics</span>
+                            <span class="tag">Business Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Retail Orders SQL Analysis</h3>
+                        <p>Complex SQL queries analyzing e-commerce orders for sales performance and customer insights.</p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Query Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Connect!</h2>
+            <p>I'm actively seeking opportunities in Data Analytics and Business Intelligence roles in Ireland and Europe.</p>
+            <div class="contact-links">
+                <a href="mailto:dayanidhi_sampath@yahoo.com">📧 Email</a>
+                <a href="https://www.linkedin.com/in/dayanidhi-ranganathan-sampath-451173191" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/DayanidhiRanganathanSampath" target="_blank">💻 GitHub</a>
+                <a href="tel:+353899462197">📞 +353-899462197</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dayanidhi Ranganathan Sampath. All rights reserved.</p>
+            <p>📍 Limerick, Ireland | 🎓 MSc Business Analytics | STAMP 1G Visa</p>
+        </div>
+    </footer>
+</body>
+</html>
